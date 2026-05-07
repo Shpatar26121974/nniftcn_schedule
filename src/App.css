@@ -1,0 +1,66 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.hdr {
+  height: var(--hdr);
+  flex-shrink: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 16px;
+  z-index: 50;
+}
+.hdr-brand { display: flex; align-items: center; gap: 12px; }
+.hdr-badge {
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 8px;
+  letter-spacing: .03em;
+  flex-shrink: 0;
+}
+.hdr-title { font-size: 17px; font-weight: 600; }
+.hdr-sub   { font-size: 13px; color: var(--text3); margin-top: 1px; }
+
+.hdr-week {
+  display: flex;
+  border: 1.5px solid var(--border2);
+  border-radius: var(--r);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.hdr-week button {
+  padding: 8px 18px;
+  border: none;
+  background: transparent;
+  color: var(--text2);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .14s;
+}
+.hdr-week button.active { background: var(--accent); color: #fff; }
+.hdr-week button:hover:not(.active) { background: var(--surface2); }
+
+/* ── Body ── */
+.body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .app  { height: auto; overflow: visible; }
+  .body { flex-direction: column; }
+  .hdr  { height: auto; padding: 12px 16px; flex-wrap: wrap; }
+}
