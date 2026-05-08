@@ -1,7 +1,7 @@
 {
   "name": "nniftcn_schedule",
   "version": "1.0.0",
-  "homepage": "https://github.com/Shpatar26121974/nniftcn_schedule",
+  "homepage": "https://github.com/shpatar26121974/nniftcn_schedule",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
